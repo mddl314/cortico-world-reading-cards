@@ -1,0 +1,59 @@
+/* 读书小卡 · World 页面样式。全部前缀 rc-，跟别的 World 不撞。颜色用半透明灰/蓝，深浅主题都能用。 */
+.rc-panel { display: flex; flex-direction: column; gap: 14px; padding: 4px 2px 24px; color: inherit; font-size: 13px; line-height: 1.55; }
+.rc-sec { border: 1px solid rgba(127,127,127,.25); border-radius: 10px; padding: 12px 14px; background: rgba(127,127,127,.04); }
+.rc-sec-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.rc-sec-title { margin: 0; font-size: 14px; font-weight: 600; }
+.rc-sec-hint { color: rgba(127,127,127,.95); font-size: 12px; }
+.rc-sec-actions { margin-left: auto; }
+.rc-form { display: flex; flex-direction: column; gap: 10px; }
+.rc-textarea { width: 100%; box-sizing: border-box; resize: vertical; min-height: 64px; padding: 8px 10px; border-radius: 8px; border: 1px solid rgba(127,127,127,.35); background: transparent; color: inherit; font: inherit; }
+.rc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; }
+.rc-field { display: flex; flex-direction: column; gap: 4px; }
+.rc-label { font-size: 12px; color: rgba(127,127,127,.95); }
+.rc-input, .rc-select { width: 100%; box-sizing: border-box; padding: 7px 9px; border-radius: 8px; border: 1px solid rgba(127,127,127,.35); background: transparent; color: inherit; font: inherit; }
+.rc-input:focus, .rc-select:focus, .rc-textarea:focus { outline: none; border-color: rgba(99,149,255,.8); box-shadow: 0 0 0 2px rgba(99,149,255,.15); }
+.rc-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.rc-btn { padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(127,127,127,.4); background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.rc-btn:hover { background: rgba(127,127,127,.12); }
+.rc-btn:disabled { opacity: .5; cursor: default; }
+.rc-btn-primary { border-color: rgba(99,149,255,.85); background: rgba(99,149,255,.16); }
+.rc-status { font-size: 12px; color: rgba(127,127,127,.95); }
+.rc-status-ok { color: #2f9e44; }
+.rc-status-error { color: #e03131; }
+.rc-search-row { display: flex; gap: 8px; }
+.rc-search-input { flex: 1; }
+.rc-results, .rc-recent { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.rc-card { border: 1px solid rgba(127,127,127,.22); border-radius: 10px; padding: 9px 11px; background: rgba(127,127,127,.05); }
+.rc-card-head { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.rc-kind { font-size: 11px; padding: 1px 7px; border-radius: 999px; border: 1px solid rgba(127,127,127,.35); color: rgba(127,127,127,1); }
+.rc-kind-quote { border-color: rgba(255,169,77,.6); color: #c77b2b; }
+.rc-kind-idea { border-color: rgba(99,149,255,.6); color: #4c7dd8; }
+.rc-kind-question { border-color: rgba(190,110,220,.6); color: #a35bc0; }
+.rc-id { font-size: 11px; color: rgba(127,127,127,.9); font-variant-numeric: tabular-nums; }
+.rc-text { white-space: pre-wrap; word-break: break-word; }
+.rc-meta { margin-top: 3px; font-size: 12px; color: rgba(127,127,127,.95); }
+.rc-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.rc-tag { font-size: 11px; padding: 1px 7px; border-radius: 999px; background: rgba(127,127,127,.14); }
+.rc-hint { color: rgba(127,127,127,.95); font-size: 12px; padding: 4px 0; }
+.rc-error { color: #e03131; font-size: 12px; padding: 4px 0; }
+.rc-count { font-size: 12px; color: rgba(127,127,127,.95); }
+
+/* 补答：问题卡下面的已有答案与追加输入框 */
+.rc-solved-card { border-color: rgba(47,158,68,.35); }
+.rc-solved { font-size: 11px; padding: 1px 7px; border-radius: 999px; border: 1px solid rgba(47,158,68,.55); color: #2f9e44; }
+.rc-answers { margin-top: 8px; padding-left: 10px; border-left: 2px solid rgba(127,127,127,.25); display: flex; flex-direction: column; gap: 4px; }
+.rc-answer { font-size: 12px; color: rgba(127,127,127,1); white-space: pre-wrap; word-break: break-word; }
+.rc-answer-row { display: flex; gap: 8px; margin-top: 8px; }
+.rc-answer-input { flex: 1; }
+
+/* 作废 / 恢复 */
+.rc-card-actions { margin-left: auto; display: flex; align-items: center; gap: 6px; }
+.rc-void-btn { padding: 1px 8px; border-radius: 999px; border: 1px solid rgba(127,127,127,.3); background: transparent; color: rgba(127,127,127,.85); font: inherit; font-size: 11px; cursor: pointer; opacity: .5; }
+.rc-void-btn:hover { opacity: 1; background: rgba(224,49,49,.08); border-color: rgba(224,49,49,.5); color: #e03131; }
+.rc-card-actions .rc-btn { padding: 2px 9px; font-size: 11px; }
+.rc-void-confirm { opacity: .6; filter: grayscale(.65); border-style: dashed; }
+.rc-void-hint { margin-top: 6px; font-size: 12px; color: #e03131; }
+.rc-voided { opacity: .45; }
+.rc-voided-pill { font-size: 11px; padding: 1px 7px; border-radius: 999px; border: 1px solid rgba(127,127,127,.45); color: rgba(127,127,127,1); }
+.rc-void-toggle { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: rgba(127,127,127,.95); cursor: pointer; margin-right: 8px; }
+.rc-void-toggle-input { margin: 0; }

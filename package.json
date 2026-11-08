@@ -1,0 +1,33 @@
+{
+  "name": "cortico-world-reading-cards",
+  "version": "0.5.0",
+  "type": "module",
+  "description": "读书小卡：把一起读过、讲过的东西一句一句存成小卡，按出处归拢成一本能翻的 markdown。纯文件、不联网、不调模型。",
+  "author": "qiqi-cortico",
+  "license": "MIT",
+  "keywords": ["cortico-world", "cortico", "coopanion", "reading", "cards", "notes"],
+  "repository": { "type": "git", "url": "git+https://github.com/mddl314/cortico-world-reading-cards.git" },
+  "engines": { "node": ">=22" },
+  "main": "./src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "scripts": { "test": "node tools/selftest.mjs" },
+  "files": ["src", "dist", "tools", "ENV_PROMPT.md", "describe.json", "README.md"],
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "displayName": "读书小卡",
+    "describe": "describe.json",
+    "webUiClient": "dist/webui.js",
+    "webUiStyle": "dist/webui.css",
+    "locales": {
+      "zh": {
+        "displayName": "读书小卡",
+        "description": "把一起读过、讲过的东西一句一句存成小卡，按出处归拢成一本 markdown。六个工具：card_add / card_list / card_search / card_book / card_answer / card_void；数据是 worlds/reading-cards/data/cards.jsonl 里的纯 JSON 行。"
+      },
+      "en": {
+        "displayName": "Reading cards",
+        "description": "Save what we read and talked through as one-line cards, grouped by source into a markdown book. Tools: card_add / card_list / card_search / card_book / card_answer / card_void; data lives in worlds/reading-cards/data/cards.jsonl."
+      }
+    }
+  }
+}
